@@ -1,6 +1,6 @@
 export class Search {
   constructor(private restaurant: any) {}
-  searchRestaurants(searchQuery: string) {
+  searchRestaurants(searchQuery: string | undefined) {
     if (searchQuery !== undefined) {
       const availableRestaurants = [];
       for (const restaurant of this.restaurant.getRestaurants()) {
