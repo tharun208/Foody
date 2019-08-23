@@ -9,7 +9,7 @@ async function main() {
   const server = express()
     .enable('x-powered-by')
     .use(express.json())
-    .use('/api/v1/search-restuarants', getController())
+    .use('/api/v1/foody', getController())
     .listen(config.port, () => {
       logger.log(`server running on http://localhost:${config.port}`);
       const stopServer = () => {

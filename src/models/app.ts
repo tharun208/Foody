@@ -1,5 +1,5 @@
 import { Restaurant } from './restaurant';
-import { Search } from './search';
+import { Search } from '../service/search';
 
 export default class App {
   static restaurant: Restaurant;
