@@ -1,6 +1,6 @@
-# Find SecondMinimum Assignment
+# Foodie Assignment
 
-This Repository contains source code for findSecondMinimum Number project.
+This Repository contains source code for Foodie project.
 
 ## Prerequisite
 
@@ -16,6 +16,6 @@ The Following stack you need to have in your machine to run this project.
 
 - Clone the Project
 - Do `yarn` to install dependencies
-- RUN `docker-compose up` to use the needed services for our app.
 - RUN `yarn dev` to start the application.
+
 # Foody
