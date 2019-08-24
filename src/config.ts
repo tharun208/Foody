@@ -10,4 +10,5 @@ function must(envName: string): string {
 export default {
   isDev: ENV.NODE_ENV === 'development',
   port: parseInt(ENV.PORT || '3000', 10),
+  secretKey: ENV.privateKey || 'test@123',
 };
