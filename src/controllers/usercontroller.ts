@@ -22,7 +22,7 @@ function loginUser(req: Request, res: Response) {
   if (body) {
     const ifuserExists = App.userService.findUser(body.email, body.password);
     if (ifuserExists) {
-      let token = jwt.sign({ userId: ifuserExists.id }, config.secretKey, {
+      let token = jwt.sign({ id: ifuserExists.id }, config.secretKey, {
         expiresIn: '1h',
       });
       res.status(200).json({ success: true, token: token });
