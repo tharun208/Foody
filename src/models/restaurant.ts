@@ -2,7 +2,7 @@ import { genId } from '../utils/utils';
 export class Restaurant {
   static restaurant: Restaurant;
   private ratings!: Array<number>;
-  private avergaeRatings!: number;
+  public averageRatings!: number;
   private ListOfrestaurants: Array<any> = [];
   insertRestuarants(restaurants: Array<any>) {
     for (const restaurant of restaurants) {
@@ -41,6 +41,6 @@ export class Restaurant {
     for (const rating in ratings) {
       totalRatings = totalRatings + ratings[rating];
     }
-    restaurant.avergaeRatings = averageRatings;
+    restaurant.averageRatings = averageRatings;
   }
 }
