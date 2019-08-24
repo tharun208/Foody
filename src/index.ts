@@ -3,13 +3,16 @@ import config from './config';
 import getController from './controllers/app';
 import Logger from './utils/logger';
 import App from './models/app';
+import getUserController from './controllers/user_controller';
+import checkAuth from './auth/auth';
 const logger = new Logger('app');
 async function main() {
   await App.init();
   const server = express()
     .enable('x-powered-by')
     .use(express.json())
-    .use('/api/v1/foody/restuarants', getController())
+    .use('/api/v1/foody/user', getUserController())
+    .use('/api/v1/foody/restuarants', checkAuth, getController())
     .listen(config.port, () => {
       logger.log(`server running on http://localhost:${config.port}`);
       const stopServer = () => {

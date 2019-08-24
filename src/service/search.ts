@@ -1,4 +1,4 @@
-export class Search {
+export class SearchService {
   constructor(private restaurant: any) {}
   searchRestaurants(searchQuery: string | undefined) {
     if (searchQuery !== undefined) {

@@ -1,6 +1,8 @@
 import { Restaurant } from './restaurant';
-import { Search } from '../service/search';
-import { Rating } from '../service/rating';
+import { SearchService } from '../service/search';
+import { RatingService } from '../service/rating';
+import { UserService } from '../service/user';
+import { User } from './user';
 
 const ListOfrestaurants = [
   {
@@ -36,13 +38,17 @@ const ListOfrestaurants = [
 ];
 
 export default class App {
+  static user: User;
   static restaurant: Restaurant;
-  static search: Search;
-  static rating: Rating;
+  static search: SearchService;
+  static rating: RatingService;
+  static userService: UserService;
   static async init() {
+    App.user = new User();
     App.restaurant = new Restaurant();
     App.restaurant.insertRestuarants(ListOfrestaurants);
-    App.search = new Search(this.restaurant);
-    App.rating = new Rating(this.restaurant);
+    App.search = new SearchService(this.restaurant);
+    App.rating = new RatingService(this.restaurant);
+    App.userService = new UserService(this.user);
   }
 }
