@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import config from '../config';
 
 export interface IDecodeType {
-  userId: string;
+  id: string;
   iat: string;
   exp: string;
 }
@@ -16,7 +16,7 @@ export default function checkAuth(req: Request, res: Response, next: NextFunctio
   if (token) {
     try {
       const decode = jwt.verify(token, config.secretKey) as IDecodeType;
-      (<any>req).userId = decode.userId;
+      (<any>req).id = decode.id;
       next();
     } catch (err) {
       res.status(401).json({
