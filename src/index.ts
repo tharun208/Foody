@@ -1,9 +1,9 @@
 import express from 'express';
 import config from './config';
-import getController from './controllers/app';
+import getController from './controllers/appcontroller';
 import Logger from './utils/logger';
 import App from './models/app';
-import getUserController from './controllers/user_controller';
+import getUserController from './controllers/usercontroller';
 import checkAuth from './auth/auth';
 const logger = new Logger('app');
 async function main() {
