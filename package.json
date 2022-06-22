@@ -17,7 +17,7 @@
     "@types/jsonwebtoken": "^8.3.3",
     "@types/nanoid": "^1.2.0",
     "babel-jest": "^24.8.0",
-    "got": "^9.6.0",
+    "got": "^11.8.5",
     "jest": "^24.8.0",
     "jsonwebtoken": "^8.5.1",
     "request": "^2.88.0",
